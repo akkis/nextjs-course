@@ -8,7 +8,13 @@ function ClientProjectsPage() {
   function loadProjectHandler() {
     // do work with remote data or something...
 
-    router.push('/clients/max/projecta');
+    router.push({
+      pathname: "/clients/[id]/[clientprojectid]",
+      query: {
+        id: "max",
+        clientprojectid: "projectA",
+      },
+    });
   }
 
   return (
